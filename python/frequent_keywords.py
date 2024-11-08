@@ -7,7 +7,7 @@ import json
 
 # Load data
 file_name = "topaz-data732--france--www.fdesouche.com--20190101--20211231.json"
-# Structure du json : data-all -> <year> -> <month> -> <day> -> [<article_id> -> kws : 'nb']
+# json struct : data-all -> <year> -> <month> -> <day> -> [<article_id> -> kws : 'nb']
 
 f = open("data/" + file_name, "r", encoding="utf-8")
 data = json.loads(f.read())
@@ -31,9 +31,7 @@ keywords = dict(sorted(keywords.items(), key=lambda item: item[1], reverse=True)
 top_keywords = {k: keywords[k] for k in list(keywords)[:n]}
 # print(top_keywords)
 
-# Plot with red-white-blue gradient and values on top of bars and 1px black border around bars
-# when hovering over a bar, the value is displayed in a box "The word '<kw>' appears <n> times"
-
+# Plot
 fig = go.Figure(data=[
     go.Bar(
         x=list(top_keywords.keys()), 
