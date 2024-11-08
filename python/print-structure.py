@@ -9,7 +9,7 @@ file_name = 'topaz-data732--france--www.fdesouche.com--20190101--20211231.json'
 
 # open and load file
 f = open('data/'+file_name, 'r', encoding='utf-8')
-data = json.loads(f.read())
+data = json.loads(f.read())*
 f.close()
 
 s = chr(9474) + ' '

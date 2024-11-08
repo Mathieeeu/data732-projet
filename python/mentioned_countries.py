@@ -52,6 +52,7 @@ fig = go.Figure(data=[
         marker_line_color='black',
         hovertemplate="'<b>%{x}</b>' is mentioned %{y} times<extra></extra>"
 )])
+
 fig.update_layout(title_text="Most mentioned countries in the dataset (excluding " + ", ".join(excluded_countries) + ")",
                   xaxis_title="Countries",
                   yaxis_title="Frequency",
