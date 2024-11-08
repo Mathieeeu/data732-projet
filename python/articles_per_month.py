@@ -1,8 +1,7 @@
 '''
 Barchart of number of articles per month
-
 '''
-import plotly.express as px
+
 import plotly.graph_objects as go
 import json
 import calendar
