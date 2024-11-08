@@ -1,7 +1,6 @@
 '''
-Barchart of all the countries mentioned in the dataset
-
-Possible improvement: display a world map with the countries mentioned in the dataset colored according to the number of times they are mentioned
+- Barchart of all the countries mentioned in the dataset
+- World map with the countries mentioned in the dataset colored according to the number of times they are mentioned
 '''
 
 import plotly.graph_objects as go
@@ -16,7 +15,7 @@ data = json.loads(f.read())
 f.close()
 
 # Country list (in French, from json)
-f = open("python/countries.json", "r", encoding="utf-8")
+f = open("python/countries/countries.json", "r", encoding="utf-8")
 countries = json.loads(f.read())
 f.close()
 
@@ -51,11 +50,47 @@ fig = go.Figure(data=[
         textposition='outside',
         marker_line_width=1,
         marker_line_color='black',
-        hovertemplate="The country '<b>%{x}</b>' is mentioned %{y} times<extra></extra>"
+        hovertemplate="'<b>%{x}</b>' is mentioned %{y} times<extra></extra>"
 )])
-fig.update_layout(title_text="Most mentioned countries in the dataset",
+fig.update_layout(title_text="Most mentioned countries in the dataset (excluding " + ", ".join(excluded_countries) + ")",
                   xaxis_title="Countries",
                   yaxis_title="Frequency",
+)
+fig.show()
+
+# World map
+import plotly.express as px
+
+# Translate country names to English using countries_fr_to_en.json
+f = open("python/countries/countries_fr_to_en.json", "r", encoding="utf-8")
+countries_fr_to_en = json.loads(f.read())
+f.close()
+mentioned_countries = {countries_fr_to_en[k]: mentioned_countries[k] for k in mentioned_countries if k in countries_fr_to_en}
+# print(mentioned_countries)
+
+# Colors for the map
+colors = [
+    "#FFFFCC", # Light yellow
+    "#FFFF66", # Yellow
+    "#FFCC33", # Gold yellow
+    "#FF9933", # Light orange
+    "#FF6600", # Orange
+    "#FF3300", # Dark orange
+    "#FF0000", # Light red
+    "#CC0000", # Bright red
+    "#990000", # Red
+    "#660000"  # Dark red
+]
+
+# Make a choropleth map with custom colors
+fig = px.choropleth(
+    locations=list(mentioned_countries.keys()), 
+    locationmode="country names", 
+    color=list(mentioned_countries.values()), 
+    color_continuous_scale=colors
+)
+fig.update_layout(
+    title_text="Countries mentioned in the dataset (excluding " + ", ".join(excluded_countries) + ")"
 )
 fig.show()
 
