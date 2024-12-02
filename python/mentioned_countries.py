@@ -7,12 +7,8 @@ import plotly.graph_objects as go
 import json
 import plotly.express as px
 
-def mentionned_countries_map(file_name, excluded_countries = ["France"]):
+def mentionned_countries_map(data, excluded_countries = ["France"]):
     # json struct : data-all -> <year> -> <month> -> <day> -> [<article_id> -> content : 'text']
-
-    f = open(file_name, "r", encoding="utf-8")
-    data = json.loads(f.read())
-    f.close()
 
     # Country list (in French, from json)
     f = open("python/countries/countries.json", "r", encoding="utf-8")
@@ -83,10 +79,8 @@ def mentionned_countries_map(file_name, excluded_countries = ["France"]):
         locations=list(mentioned_countries.keys()), 
         locationmode="country names", 
         color=list(mentioned_countries.values()), 
-        color_continuous_scale=colors
-    )
-    fig2.update_layout(
-        title_text="Countries mentioned in the dataset (excluding " + ", ".join(excluded_countries) + ")"
+        color_continuous_scale=colors,
+        title="Countries mentioned in the dataset (excluding " + ", ".join(excluded_countries) + ")"
     )
 
     return fig1, fig2

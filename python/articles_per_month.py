@@ -7,16 +7,10 @@ import json
 import calendar
 from datetime import datetime
 
-file_name = "topaz-data732--france--www.fdesouche.com--20190101--20211231.json"
-
-f = open("data/"+file_name, 'r', encoding='utf-8')
-df = json.loads(f.read())
-f.close()
-
-def articles_per_month(df):
+def articles_per_month(data):
     articles_per_month = []
 
-    data_months = df["data-all"]
+    data_months = data["data-all"]
     for year, months in data_months.items():
         for month, cat in months.items():
             name_month = calendar.month_name[int(month)]

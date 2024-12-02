@@ -80,4 +80,4 @@ def frequent_keywords_hist (data):
         ]
     )
 
-    fig.show()
+    return fig
