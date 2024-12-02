@@ -5,6 +5,8 @@
 
 import plotly.graph_objects as go
 import json
+import plotly.express as px
+
 
 # Load data
 file_name = "topaz-data732--france--www.fdesouche.com--20190101--20211231.json"
@@ -60,7 +62,6 @@ fig.update_layout(title_text="Most mentioned countries in the dataset (excluding
 fig.show()
 
 # World map
-import plotly.express as px
 
 # Translate country names to English using countries_fr_to_en.json
 f = open("python/countries/countries_fr_to_en.json", "r", encoding="utf-8")
