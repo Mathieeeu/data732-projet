@@ -38,7 +38,7 @@ def mentionned_countries_map(data, excluded_countries = ["France"]):
         go.Bar(
             x=list(most_mentioned_countries.keys()), 
             y=list(most_mentioned_countries.values()),
-            marker=dict(color=list(most_mentioned_countries.values()), colorscale='viridis'),
+            marker=dict(color=list(most_mentioned_countries.values()), colorscale='plasma'),
             text=list(most_mentioned_countries.values()),
             textposition='outside',
             marker_line_width=1,

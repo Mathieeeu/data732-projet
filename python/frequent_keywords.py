@@ -44,7 +44,7 @@ def frequent_keywords_hist (data):
             go.Bar(
                 x=list(top_keywords[key].keys()), 
                 y=list(top_keywords[key].values()),
-                marker=dict(color=list(top_keywords[key].values()), colorscale='RdBu'),
+                marker=dict(color=list(top_keywords[key].values()), colorscale='plasma'),
                 text=list(top_keywords[key].values()),
                 textposition='outside',
                 marker_line_width=1,

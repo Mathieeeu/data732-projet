@@ -20,7 +20,7 @@ def generate_dashboard(file_list):
     app.layout = html.Div(children=[
         html.H1(children = "Dashboard test"),
         dcc.Dropdown(id="dataset",
-                    options = [{'label': file, 'value' : file}
+                    options = [{'label': file[:-5], 'value' : file}
                                 for file in file_list],
                     value = file_list[0]),
         dcc.Graph(id = "graphs")
