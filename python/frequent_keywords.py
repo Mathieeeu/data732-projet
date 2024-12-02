@@ -3,17 +3,8 @@ Barchart of the most frequent keywords in the dataset
 '''
 
 import plotly.graph_objects as go
-import json
 
-# Load data
-file_name = "topaz-data732--france--www.fdesouche.com--20190101--20211231.json"
-# json struct : data-all -> <year> -> <month> -> <day> -> [<article_id> -> kws : 'nb']
-
-f = open("data/" + file_name, "r", encoding="utf-8")
-data = json.loads(f.read())
-f.close()
-
-def frequent_keywords (data):
+def frequent_keywords_hist (data):
     # Count keywords frequency
     keywords = {}
     keywords_total = {}
