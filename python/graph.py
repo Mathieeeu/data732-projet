@@ -6,9 +6,9 @@ from fa2 import ForceAtlas2
 import numpy as np
 import community as community_louvain
 
-def create_cooccurrence_matrix(file_name):
+def create_cooccurrence_matrix(file_name, threshold=1):
     print("Opening file...")
-    f = open(file_name, "r", encoding="utf-8")
+    f = open("data/" + file_name, "r", encoding="utf-8")
     data = json.loads(f.read())
     f.close()
     print("File loaded successfully.")
@@ -21,7 +21,7 @@ def create_cooccurrence_matrix(file_name):
                 print(f"Processing day: {day}/{month}/{year}")
                 for article in data["data-all"][year][month][day]:
                     keywords = list(article['kws'].keys())
-                    keywords = [kw for kw in keywords if article['kws'][kw] > 1]
+                    keywords = [kw for kw in keywords if article['kws'][kw] > threshold]
                     for i in range(len(keywords)):
                         for j in range(i + 1, len(keywords)):
                             pair = tuple(sorted([keywords[i], keywords[j]]))
@@ -32,12 +32,12 @@ def create_cooccurrence_matrix(file_name):
     print(f"Data processing completed. {len(cooccurrence)} pairs of keywords found.")
     return cooccurrence
 
-def save_graph_to_graphml(cooccurrence, output_file):
+def save_graph_to_graphml(cooccurrence, output_file, threshold=25):
     print("Creating graph...")
     G = nx.Graph()
 
     for (kw1, kw2), count in cooccurrence.items():
-        if count < 25:
+        if count < threshold:
             continue
         G.add_edge(kw1, kw2, weight=count)
     print("Saving graph to GraphML format...")
@@ -157,13 +157,53 @@ def plot_graph(G, display_plot=True, output_file=None):
         fig.show()
         print("Graph displayed successfully.")
 
+def all_files_graph(file_list, display_plot=True):
+    """
+    make one sigle graph with all cooccurrences from all files
+    """
+    cooccurrence = {}
+    for output_name, file_name in file_list.items():
+        cooccurrence.update(create_cooccurrence_matrix(file_name, threshold=0))
+    save_graph_to_graphml(cooccurrence, f"graphes/output_all.graphml", threshold=25)
+    G = nx.read_graphml(f"graphes/output_all.graphml")
+    plot_graph(G, display_plot=True, output_file=f"graphes/graph_all.html")
+    return G
+
 # Usage
-file_name = "topaz-data732--france--www.fdesouche.com--20190101--20211231.json"
-cooccurrence = create_cooccurrence_matrix(file_name)
+
+# # Génération du graphe pour le fichier et le nom suivant 
+# file_name = "topaz-data732--france--www.fdesouche.com--20190101--20211231.json"
+# output_name = "france_fdesouche"
+
+# cooccurrence = create_cooccurrence_matrix(file_name)
+# # Save graph to GraphML format (Gephi, plotly)
+# save_graph_to_graphml(cooccurrence, f"graphes/output_{output_name}.graphml")
+# # Load graph and plot via plotly
+# G = nx.read_graphml(f"graphes/output_{output_name}.graphml")
+# plot_graph(G, display_plot=True, output_file=f"graphes/graph_{output_name}.html")
+
+
+file_list = {
+    "france_fdesouche": "topaz-data732--france--www.fdesouche.com--20190101--20211231.json",
+    "france_egalite": "topaz-data732--france--www.egaliteetreconciliation.fr--20190101--20211231.json",
+    "france_sputnik": "topaz-data732--france--fr.sputniknews.africa--20190101--20211231.json",
+    "france_presstv": "topaz-data732--france--french.presstv.ir--20190101--20211231.json",
+    "mali_egalite": "topaz-data732--mali--www.egaliteetreconciliation.fr--20190101--20211231.json",
+    "mali_sputnik": "topaz-data732--mali--fr.sputniknews.africa--20190101--20211231.json",
+    "mali_presstv": "topaz-data732--mali--french.presstv.ir--20190101--20211231.json",
+}
 
 # Save graph to GraphML format (Gephi, plotly)
-save_graph_to_graphml(cooccurrence, "output_graph.graphml")
-
+for output_name, file_name in file_list.items():
+    cooccurrence = create_cooccurrence_matrix(file_name, threshold=0)
+    save_graph_to_graphml(cooccurrence, f"graphes/output_{output_name}.graphml", threshold=25)
+    
+input("Press enter to continue...")
 # Load graph and plot via plotly
-G = nx.read_graphml("output_graph.graphml")
-plot_graph(G, display_plot=True, output_file="graph.html")
+for output_name, file_name in file_list.items():
+    G = nx.read_graphml(f"graphes/output_{output_name}.graphml")
+    plot_graph(G, display_plot=False, output_file=f"graphes/graph_{output_name}.html")
+    
+input("Press enter to continue...")
+# Generate a graph with all cooccurrences from all files
+G = all_files_graph(file_list, display_plot=True)

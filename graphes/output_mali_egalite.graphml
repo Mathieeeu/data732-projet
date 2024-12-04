@@ -1,0 +1,1206 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="weight" attr.type="int" />
+  <graph edgedefault="undirected">
+    <node id="militaire" />
+    <node id="pays" />
+    <node id="nord" />
+    <node id="nouveau" />
+    <node id="état" />
+    <node id="groupe" />
+    <node id="armée" />
+    <node id="national" />
+    <node id="président" />
+    <node id="chef" />
+    <node id="face" />
+    <node id="gouvernement" />
+    <node id="afrique" />
+    <node id="mali" />
+    <node id="mort" />
+    <node id="dernier" />
+    <node id="an" />
+    <node id="djihadiste" />
+    <node id="opération" />
+    <node id="sahel" />
+    <node id="burkina" />
+    <node id="faso" />
+    <node id="terroriste" />
+    <node id="autorité" />
+    <node id="niger" />
+    <node id="situation" />
+    <node id="compte" />
+    <node id="soldat" />
+    <node id="sud" />
+    <node id="france" />
+    <node id="malien" />
+    <node id="fois" />
+    <node id="droit" />
+    <node id="force" />
+    <node id="pari" />
+    <node id="affaire" />
+    <node id="jour" />
+    <node id="sécurité" />
+    <node id="français" />
+    <node id="mois" />
+    <node id="macron" />
+    <node id="place" />
+    <node id="république" />
+    <node id="africain" />
+    <node id="grand" />
+    <node id="partie" />
+    <node id="réalité" />
+    <node id="régional" />
+    <node id="cas" />
+    <node id="bon" />
+    <node id="guerre" />
+    <node id="base" />
+    <node id="monde" />
+    <node id="général" />
+    <node id="fin" />
+    <node id="ancien" />
+    <node id="frontière" />
+    <node id="homme" />
+    <node id="américain" />
+    <node id="local" />
+    <node id="contrôle" />
+    <node id="conflit" />
+    <node id="politique" />
+    <node id="temps" />
+    <node id="vie" />
+    <node id="région" />
+    <node id="question" />
+    <node id="année" />
+    <node id="actuel" />
+    <node id="bernard" />
+    <node id="origine" />
+    <node id="coup" />
+    <node id="haut" />
+    <node id="moyen" />
+    <node id="ministre" />
+    <edge source="militaire" target="pays">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="militaire" target="nouveau">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="militaire" target="état">
+      <data key="d0">38</data>
+    </edge>
+    <edge source="militaire" target="groupe">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="militaire" target="armée">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="militaire" target="président">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="militaire" target="afrique">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="militaire" target="mali">
+      <data key="d0">41</data>
+    </edge>
+    <edge source="militaire" target="dernier">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="militaire" target="opération">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="militaire" target="sahel">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="militaire" target="français">
+      <data key="d0">38</data>
+    </edge>
+    <edge source="militaire" target="force">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="militaire" target="guerre">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="militaire" target="grand">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="militaire" target="france">
+      <data key="d0">39</data>
+    </edge>
+    <edge source="militaire" target="politique">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="militaire" target="région">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="pays" target="nord">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="pays" target="nouveau">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="pays" target="état">
+      <data key="d0">42</data>
+    </edge>
+    <edge source="pays" target="groupe">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="pays" target="armée">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="pays" target="national">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="pays" target="président">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="pays" target="chef">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="pays" target="face">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="pays" target="gouvernement">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="pays" target="afrique">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="pays" target="mali">
+      <data key="d0">50</data>
+    </edge>
+    <edge source="pays" target="mort">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="pays" target="dernier">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="pays" target="an">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="pays" target="france">
+      <data key="d0">51</data>
+    </edge>
+    <edge source="pays" target="français">
+      <data key="d0">50</data>
+    </edge>
+    <edge source="pays" target="jour">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="pays" target="pari">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="pays" target="grand">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="pays" target="force">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="pays" target="partie">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="pays" target="guerre">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="pays" target="monde">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="pays" target="fin">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="pays" target="ancien">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="pays" target="malien">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="pays" target="homme">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="pays" target="politique">
+      <data key="d0">44</data>
+    </edge>
+    <edge source="pays" target="question">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="pays" target="année">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="pays" target="fois">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="nord" target="état">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="nord" target="armée">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="nord" target="afrique">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="nord" target="mali">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="nord" target="france">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="nord" target="politique">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="nord" target="français">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="nord" target="force">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="nord" target="grand">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="nouveau" target="état">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="nouveau" target="armée">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="nouveau" target="mali">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="nouveau" target="dernier">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="nouveau" target="an">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="nouveau" target="france">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="nouveau" target="politique">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="nouveau" target="français">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="nouveau" target="grand">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="état" target="djihadiste">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="état" target="burkina">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="état" target="faso">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="état" target="groupe">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="état" target="terroriste">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="état" target="armée">
+      <data key="d0">41</data>
+    </edge>
+    <edge source="état" target="autorité">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="état" target="national">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="état" target="président">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="état" target="chef">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="état" target="face">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="état" target="afrique">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="état" target="niger">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="état" target="mali">
+      <data key="d0">57</data>
+    </edge>
+    <edge source="état" target="mort">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="état" target="dernier">
+      <data key="d0">42</data>
+    </edge>
+    <edge source="état" target="an">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="état" target="opération">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="état" target="sahel">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="état" target="situation">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="état" target="france">
+      <data key="d0">51</data>
+    </edge>
+    <edge source="état" target="français">
+      <data key="d0">56</data>
+    </edge>
+    <edge source="état" target="mois">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="état" target="jour">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="état" target="place">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="état" target="pari">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="état" target="grand">
+      <data key="d0">47</data>
+    </edge>
+    <edge source="état" target="force">
+      <data key="d0">39</data>
+    </edge>
+    <edge source="état" target="régional">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="état" target="partie">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="état" target="cas">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="état" target="réalité">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="état" target="bon">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="état" target="local">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="état" target="guerre">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="état" target="base">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="état" target="monde">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="état" target="général">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="état" target="fin">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="état" target="ancien">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="état" target="frontière">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="état" target="contrôle">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="état" target="homme">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="état" target="politique">
+      <data key="d0">47</data>
+    </edge>
+    <edge source="état" target="temps">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="état" target="région">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="état" target="question">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="état" target="année">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="état" target="fois">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="état" target="conflit">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="état" target="moyen">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="groupe" target="terroriste">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="groupe" target="armée">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="groupe" target="chef">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="groupe" target="mali">
+      <data key="d0">41</data>
+    </edge>
+    <edge source="groupe" target="dernier">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="groupe" target="france">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="groupe" target="force">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="groupe" target="français">
+      <data key="d0">37</data>
+    </edge>
+    <edge source="groupe" target="guerre">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="groupe" target="grand">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="groupe" target="politique">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="groupe" target="région">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="armée" target="terroriste">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="armée" target="président">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="armée" target="chef">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="armée" target="afrique">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="armée" target="mali">
+      <data key="d0">42</data>
+    </edge>
+    <edge source="armée" target="dernier">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="armée" target="opération">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="armée" target="sahel">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="armée" target="grand">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="armée" target="force">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="armée" target="français">
+      <data key="d0">39</data>
+    </edge>
+    <edge source="armée" target="france">
+      <data key="d0">40</data>
+    </edge>
+    <edge source="armée" target="politique">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="armée" target="région">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="armée" target="guerre">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="national" target="mali">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="national" target="france">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="national" target="français">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="national" target="politique">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="président" target="mali">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="président" target="opération">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="président" target="france">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="président" target="français">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="président" target="grand">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="président" target="politique">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="chef" target="mali">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="chef" target="dernier">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="chef" target="france">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="chef" target="français">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="chef" target="politique">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="chef" target="grand">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="face" target="mali">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="face" target="dernier">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="face" target="grand">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="face" target="force">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="face" target="français">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="face" target="france">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="face" target="politique">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="gouvernement" target="france">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="gouvernement" target="français">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="afrique" target="mali">
+      <data key="d0">40</data>
+    </edge>
+    <edge source="afrique" target="dernier">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="afrique" target="france">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="afrique" target="français">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="afrique" target="grand">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="afrique" target="guerre">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="afrique" target="politique">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="mali" target="djihadiste">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="burkina">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="mali" target="faso">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="mali" target="terroriste">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="autorité">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="mali" target="compte">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="mali" target="soldat">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="mali" target="niger">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="mali" target="mort">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="mali" target="dernier">
+      <data key="d0">41</data>
+    </edge>
+    <edge source="mali" target="an">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="mali" target="opération">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="mali" target="sahel">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="mali" target="situation">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="mali" target="sud">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="mali" target="france">
+      <data key="d0">58</data>
+    </edge>
+    <edge source="mali" target="français">
+      <data key="d0">61</data>
+    </edge>
+    <edge source="mali" target="mois">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="mali" target="jour">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="mali" target="place">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="africain">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="mali" target="pari">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="mali" target="force">
+      <data key="d0">41</data>
+    </edge>
+    <edge source="mali" target="guerre">
+      <data key="d0">38</data>
+    </edge>
+    <edge source="mali" target="grand">
+      <data key="d0">47</data>
+    </edge>
+    <edge source="mali" target="base">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="mali" target="monde">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="mali" target="général">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="mali" target="fin">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="mali" target="ancien">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="mali" target="frontière">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="mali" target="malien">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="homme">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="mali" target="fois">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="mali" target="conflit">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="mali" target="régional">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="mali" target="politique">
+      <data key="d0">54</data>
+    </edge>
+    <edge source="mali" target="temps">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="mali" target="région">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="mali" target="question">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="mali" target="réalité">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="mali" target="année">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="mali" target="origine">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="bon">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="mali" target="actuel">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="bernard">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="partie">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="haut">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="mali" target="moyen">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mali" target="ministre">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="mort" target="français">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="mort" target="france">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="mort" target="politique">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="dernier" target="an">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="dernier" target="opération">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="dernier" target="france">
+      <data key="d0">39</data>
+    </edge>
+    <edge source="dernier" target="français">
+      <data key="d0">43</data>
+    </edge>
+    <edge source="dernier" target="mois">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="dernier" target="jour">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="dernier" target="grand">
+      <data key="d0">37</data>
+    </edge>
+    <edge source="dernier" target="force">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="dernier" target="monde">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="dernier" target="région">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="dernier" target="fois">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="dernier" target="année">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="dernier" target="guerre">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="dernier" target="politique">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="an" target="grand">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="an" target="france">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="an" target="français">
+      <data key="d0">38</data>
+    </edge>
+    <edge source="an" target="pari">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="an" target="monde">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="an" target="année">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="an" target="politique">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="opération" target="français">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="opération" target="france">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="opération" target="politique">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="sahel" target="français">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="sahel" target="france">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="sahel" target="politique">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="burkina" target="faso">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="burkina" target="politique">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="terroriste" target="france">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="terroriste" target="français">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="autorité" target="france">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="autorité" target="français">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="autorité" target="politique">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="situation" target="français">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="situation" target="france">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="compte" target="français">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="compte" target="france">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="malien">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="france" target="fois">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="france" target="droit">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="france" target="pari">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="france" target="affaire">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="jour">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="france" target="sécurité">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="force">
+      <data key="d0">38</data>
+    </edge>
+    <edge source="france" target="français">
+      <data key="d0">61</data>
+    </edge>
+    <edge source="france" target="mois">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="france" target="macron">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="place">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="france" target="république">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="africain">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="américain">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="france" target="guerre">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="france" target="grand">
+      <data key="d0">43</data>
+    </edge>
+    <edge source="france" target="monde">
+      <data key="d0">39</data>
+    </edge>
+    <edge source="france" target="général">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="france" target="fin">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="homme">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="france" target="conflit">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="france" target="politique">
+      <data key="d0">50</data>
+    </edge>
+    <edge source="france" target="temps">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="france" target="vie">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="région">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="question">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="france" target="réalité">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="france" target="année">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="france" target="bon">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="partie">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="france" target="coup">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="france" target="moyen">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="malien" target="français">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="fois" target="français">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="fois" target="grand">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="fois" target="politique">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="force" target="grand">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="force" target="français">
+      <data key="d0">36</data>
+    </edge>
+    <edge source="force" target="guerre">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="force" target="politique">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="pari" target="français">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="pari" target="grand">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="pari" target="politique">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="affaire" target="français">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="jour" target="français">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="jour" target="grand">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="jour" target="politique">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="français" target="mois">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="français" target="macron">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="français" target="place">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="français" target="africain">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="français" target="guerre">
+      <data key="d0">37</data>
+    </edge>
+    <edge source="français" target="grand">
+      <data key="d0">45</data>
+    </edge>
+    <edge source="français" target="base">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="français" target="monde">
+      <data key="d0">38</data>
+    </edge>
+    <edge source="français" target="général">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="français" target="fin">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="français" target="ancien">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="français" target="frontière">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="français" target="homme">
+      <data key="d0">34</data>
+    </edge>
+    <edge source="français" target="conflit">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="français" target="politique">
+      <data key="d0">50</data>
+    </edge>
+    <edge source="français" target="temps">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="français" target="vie">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="français" target="région">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="français" target="question">
+      <data key="d0">33</data>
+    </edge>
+    <edge source="français" target="réalité">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="français" target="année">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="français" target="origine">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="français" target="bon">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="français" target="bernard">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="français" target="partie">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="français" target="haut">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="français" target="coup">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="français" target="cas">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="français" target="moyen">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="français" target="ministre">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="mois" target="grand">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="mois" target="politique">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="grand" target="partie">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="grand" target="réalité">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="grand" target="guerre">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="grand" target="monde">
+      <data key="d0">32</data>
+    </edge>
+    <edge source="grand" target="homme">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="grand" target="question">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="grand" target="année">
+      <data key="d0">31</data>
+    </edge>
+    <edge source="grand" target="politique">
+      <data key="d0">42</data>
+    </edge>
+    <edge source="grand" target="moyen">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="partie" target="politique">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="réalité" target="politique">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="régional" target="politique">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="guerre" target="politique">
+      <data key="d0">35</data>
+    </edge>
+    <edge source="guerre" target="question">
+      <data key="d0">26</data>
+    </edge>
+    <edge source="monde" target="politique">
+      <data key="d0">30</data>
+    </edge>
+    <edge source="général" target="politique">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="ancien" target="politique">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="frontière" target="politique">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="homme" target="politique">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="conflit" target="politique">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="politique" target="région">
+      <data key="d0">27</data>
+    </edge>
+    <edge source="politique" target="question">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="politique" target="année">
+      <data key="d0">29</data>
+    </edge>
+    <edge source="politique" target="actuel">
+      <data key="d0">25</data>
+    </edge>
+    <edge source="politique" target="bernard">
+      <data key="d0">28</data>
+    </edge>
+    <edge source="politique" target="moyen">
+      <data key="d0">27</data>
+    </edge>
+  </graph>
+</graphml>

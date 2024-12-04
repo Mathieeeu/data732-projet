@@ -1,7 +1,6 @@
 from dashboard import generate_dashboard
 import glob
 
-
 # f = open("data/topaz-data732--france--www.fdesouche.com--20190101--20211231.json", "r", encoding="utf-8")
 # data = json.loads(f.read())
 # f.close()
