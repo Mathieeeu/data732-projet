@@ -81,6 +81,7 @@ def frequent_keywords_hist (data):
         plot_bgcolor= 'rgba(0,0,0,0)',
         paper_bgcolor = 'rgba(0,0,0,0)',
         font=dict(color='white'),
+        margin=dict(l=10, r=20, t=40, b=10)
     )
 
     return fig

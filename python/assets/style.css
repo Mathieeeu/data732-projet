@@ -14,21 +14,21 @@ body {
 h1 {
     font-family: "Poppins"; 
     color: #ffffff; 
-    font-size: 45px;
+    font-size: 40px;
     margin: 15px;
 }
 
 h2 {
     margin: 15px;
     font-family: "Poppins";
-    font-size: 26px ;
+    font-size: 22px ;
     color: #ffffff;
 }
 
 p {
     font-family: "Poppins";
     color: #ffffff;
-    font-size: 18px;
+    font-size: 15px;
     margin: 15px;
     text-align: justify;
 }
@@ -36,7 +36,7 @@ p {
 /* Dropdown*/
 
 .customDropdown {
-    font-size: 16px;
+    font-size: 13px;
     font-family: "Poppins";
     padding-left: 1px;
 }
@@ -70,39 +70,37 @@ p {
 }
 
 
-/* Conteneur de la grille */
+/* Graphics */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr; /* La première colonne est petite (1fr), la seconde est plus grande (2fr) */
     grid-template-rows: 1fr 2fr;    /* La première ligne est petite (1fr), la seconde est plus grande (2fr) */
     gap: 10px;
-    height: 93vh; 
+    height: 90vh; 
     width: 100%;
 }
 
-/* Style des graphiques */
 .graph-div {
     border: 1px solid #ccc; /* Optionnel : bordure pour séparer les graphiques */
     border-radius: 5px; 
 }
 
-/* Positions des graphiques */
 .graph-1 {
-    grid-column: 1; /* Colonne 1 */
-    grid-row: 1;    /* Ligne 1 */
+    grid-column: 1; 
+    grid-row: 1;   
 }
 
 .graph-2 {
-    grid-column: 2; /* Colonne 2 */
-    grid-row: 1;    /* Ligne 1 */
+    grid-column: 2;
+    grid-row: 1;   
 }
 
 .graph-3 {
-    grid-column: 1; /* Colonne 1 */
-    grid-row: 2;    /* Ligne 2 */
+    grid-column: 1; 
+    grid-row: 2;    
 }
 
 .graph-4 {
-    grid-column: 2; /* Colonne 2 */
-    grid-row: 2;    /* Ligne 2 */
+    grid-column: 2; 
+    grid-row: 2;  
 }

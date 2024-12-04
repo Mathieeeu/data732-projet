@@ -52,7 +52,8 @@ def mentionned_countries_map(data, excluded_countries = ["France"]):
         yaxis_title="Frequency",
         plot_bgcolor= 'rgba(0,0,0,0)',
         paper_bgcolor = 'rgba(0,0,0,0)',
-        font=dict(color='white')
+        font=dict(color='white'),
+        margin=dict(l=10, r=20, t=40, b=10)
     )
 
     # World map

@@ -19,7 +19,7 @@ def generate_dashboard(file_list):
         html.Div([
             html.Div([
                 html.H1("Corpus Dashboard"),
-                html.P("This dashboard allows to view data extracted from different articles coming from site of extreme right ")
+                html.P("This dashboard provides an overview of data extracted from various articles published on far-right websites ")
                 ]), 
             html.Div([
                 html.H2("Choose a soucre of data"),
@@ -27,36 +27,37 @@ def generate_dashboard(file_list):
                         options = [{'label': file[20:-5], 'value' : file}
                                     for file in file_list],
                         value = file_list[0],
-                        optionHeight=80,
+                        optionHeight=60,
                         className='customDropdown')
                         ],
                 style={
-                    'margin-top': 100,
-                    'margin-left': 15,
-                    'margin-right': 15
+                    'margin-top': '5vh',
+                    'margin-left': '0.4vw',
+                    'margin-right': '0.4vw'
                     }
             ),
             html.Div(
-                html.P("@ Louna Camas & Mathieu Docher, All rights reserved"),
+                html.P("@ Louna Camas & Mathieu Docher, All rights reserved",
                 style ={
                     'color' : '#cccccc',
-                    'font-size' : '5px',
-                    'margin-top' : '33vh'}), 
+                    'font-size' : 12,
+                    'margin-top' : '20vh'})), 
             ],
             style={
                 'width': '15%',
-                'margin-left': 15,
-                'margin-top': 35,
-                'margin-bottom': 35
+                'margin-left': '0.4vw',
+                'margin-top': '0.4vh',
+                'margin-bottom': '5vh'
                 }),
         html.Div(
             id="graphs-container", 
             className="graphs-container",
             style={
                 'width': '100%',
-                'margin-top': 35,
-                'margin-right': 35,
-                'margin-bottom': 35,
+                'margin-top': '5vh',
+                'margin-right': '1vw',
+                'margin-left': '1vw',
+                'margin-bottom': '1vh',
                 'display': 'flex'
             })
     ],
@@ -83,10 +84,10 @@ def generate_dashboard(file_list):
         # Create separate divs for each figure
         return html.Div(
             children=[
-                html.Div(dcc.Graph(figure=fig_frequent_keywords), className="graph-div graph-1"),
-                html.Div(dcc.Graph(figure=fig_articles_per_month), className="graph-div graph-3"),
-                html.Div(dcc.Graph(figure=fig_country_map), className="graph-div graph-4"),
-                html.Div(dcc.Graph(figure=fig_country_hist), className="graph-div graph-2"),
+                html.Div(dcc.Graph(figure=fig_frequent_keywords, style={"width": "30vw", "height": "45vh"}), className="graph-div graph-1"),
+                html.Div(dcc.Graph(figure=fig_articles_per_month, style={"width": "30vw", "height": "45vh"}), className="graph-div graph-3"),
+                html.Div(dcc.Graph(figure=fig_country_map, style={"width": "50vw", "height": "45vh"}), className="graph-div graph-4"),
+                html.Div(dcc.Graph(figure=fig_country_hist, style={"width": "50vw", "height": "45vh"}), className="graph-div graph-2"),
             ],
             className="grid-container"
         )

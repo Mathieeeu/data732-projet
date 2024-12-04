@@ -27,7 +27,7 @@ def articles_per_month(data):
             y=counts,
             marker=dict(
                     color=counts, 
-                    colorscale="Greens"
+                    colorscale="plasma"
                     #colorbar=dict(title="Number of Articles")  # Afficher une barre de couleur à droite
                 ),
                 hovertemplate="<b>Date:</b> %{x}<br>" + "<b>Number of articles:</b> %{y}<extra></extra>"
