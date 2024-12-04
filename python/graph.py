@@ -53,11 +53,12 @@ def normalize_size(degree, min_degree, max_degree, min_size, max_size):
         return min_size
     return ((degree - min_degree) / (max_degree - min_degree)) * (max_size - min_size) + min_size
 
-def plot_graph(G):
+def plot_graph(G, display_plot=True, output_file=None):
     min_size = 10
     max_size = 50
     scaling_ratio = 3.0
     gravity = 0.6
+    edge_color = '#d2d2d2'
 
     degrees = dict(G.degree())
     min_degree = min(degrees.values())
@@ -103,7 +104,7 @@ def plot_graph(G):
 
     edge_trace = go.Scatter(
         x=edge_x, y=edge_y,
-        line=dict(width=0.5, color='#888'),
+        line=dict(width=0.5, color=edge_color),
         hoverinfo='none',
         mode='lines')
 
@@ -112,38 +113,28 @@ def plot_graph(G):
     node_y = []
     node_color = []
     node_size = []
+    node_text = []
     for node in G.nodes():
         x, y = positions[node]
         node_x.append(x)
         node_y.append(y)
         node_color.append(partition.get(node, 0))
         node_size.append(normalize_size(degrees[node], min_degree, max_degree, min_size, max_size))
+        node_text.append(node)
     print("Node traces created.")
 
     node_trace = go.Scatter(
         x=node_x, y=node_y,
-        mode='markers',
+        mode='markers+text',
         hoverinfo='text',
+        text=node_text,  # Adding labels to nodes
+        textposition='top center',
         marker=dict(
-            showscale=True,
+            showscale=False,  # Hiding the legend bar
             colorscale='YlGnBu',
             size=node_size,
             color=node_color,
-            colorbar=dict(
-                thickness=15,
-                title='Node Connections',
-                xanchor='left',
-                titleside='right'
-            ),
-            line_width=2))
-
-    print("Assigning node attributes...")
-    node_adjacencies = []
-    node_text = []
-    for node, adjacencies in enumerate(G.adjacency()):
-        node_adjacencies.append(len(adjacencies[1]))
-        node_text.append(f'{adjacencies[0]}<br># of connections: {len(adjacencies[1])}')
-    print("Node attributes assigned.")
+            line_width=0))  # Removing node borders
 
     node_trace.marker.color = node_color
     node_trace.text = node_text
@@ -151,15 +142,20 @@ def plot_graph(G):
     print("Creating figure...")
     fig = go.Figure(data=[edge_trace, node_trace],
                     layout=go.Layout(
-                        showlegend=False,
+                        showlegend=False,  # Ensuring the legend is hidden
                         hovermode='closest',
                         margin=dict(b=0, l=0, r=0, t=0),
                         xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
                         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)
                     ))
-    print("Figure created. Displaying graph...")
-    fig.show()
-    print("Graph displayed successfully.")
+    print("Figure created")
+    
+    if output_file:
+        fig.write_html(output_file)
+        print(f"Figure saved to {output_file}")
+    if display_plot:
+        fig.show()
+        print("Graph displayed successfully.")
 
 # Usage
 file_name = "topaz-data732--france--www.fdesouche.com--20190101--20211231.json"
@@ -170,4 +166,4 @@ save_graph_to_graphml(cooccurrence, "output_graph.graphml")
 
 # Load graph and plot via plotly
 G = nx.read_graphml("output_graph.graphml")
-plot_graph(G)
+plot_graph(G, display_plot=True, output_file="graph.html")
