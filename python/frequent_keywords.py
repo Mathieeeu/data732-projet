@@ -77,7 +77,10 @@ def frequent_keywords_hist (data):
                 yanchor="top",
                 active=len(keywords.keys())-1
             ),
-        ]
+        ],
+        plot_bgcolor= 'rgba(0,0,0,0)',
+        paper_bgcolor = 'rgba(0,0,0,0)',
+        font=dict(color='white'),
     )
 
     return fig

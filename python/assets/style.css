@@ -1,0 +1,108 @@
+body {
+    background-color: #010103;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    width : 100%;
+    height : 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #010103;
+}
+
+h1 {
+    font-family: "Poppins"; 
+    color: #ffffff; 
+    font-size: 45px;
+    margin: 15px;
+}
+
+h2 {
+    margin: 15px;
+    font-family: "Poppins";
+    font-size: 26px ;
+    color: #ffffff;
+}
+
+p {
+    font-family: "Poppins";
+    color: #ffffff;
+    font-size: 18px;
+    margin: 15px;
+    text-align: justify;
+}
+
+/* Dropdown*/
+
+.customDropdown {
+    font-size: 16px;
+    font-family: "Poppins";
+    padding-left: 1px;
+}
+
+.customDropdown .Select-control {
+    width: 100%;
+    height: 38px;
+    background-color: transparent;
+    border: 1px solid #676768;
+    border-radius: 3px;
+    color : #eefbfd 
+}
+
+.customDropdown .Select-value-label,
+.customDropdown .Select-placeholder {
+    color: #eefbfd  !important;
+}
+
+.customDropdown .Select-menu-outer {
+    margin-top: 5px;
+    border-radius: 3px;
+    background-color: #010103;
+    border: 1px solid #676768;
+    color: var(--bs-light);
+}
+
+.customDropdown .VirtualizedSelectFocusedOption {
+    background-color: color-mix(in srgb, #cccccc, #010103 7%);
+    border-radius: 3px;
+    color: #010103;
+}
+
+
+/* Conteneur de la grille */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* La première colonne est petite (1fr), la seconde est plus grande (2fr) */
+    grid-template-rows: 1fr 2fr;    /* La première ligne est petite (1fr), la seconde est plus grande (2fr) */
+    gap: 10px;
+    height: 93vh; 
+    width: 100%;
+}
+
+/* Style des graphiques */
+.graph-div {
+    border: 1px solid #ccc; /* Optionnel : bordure pour séparer les graphiques */
+    border-radius: 5px; 
+}
+
+/* Positions des graphiques */
+.graph-1 {
+    grid-column: 1; /* Colonne 1 */
+    grid-row: 1;    /* Ligne 1 */
+}
+
+.graph-2 {
+    grid-column: 2; /* Colonne 2 */
+    grid-row: 1;    /* Ligne 1 */
+}
+
+.graph-3 {
+    grid-column: 1; /* Colonne 1 */
+    grid-row: 2;    /* Ligne 2 */
+}
+
+.graph-4 {
+    grid-column: 2; /* Colonne 2 */
+    grid-row: 2;    /* Ligne 2 */
+}

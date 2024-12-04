@@ -1,75 +1,100 @@
 '''
 Dashboard
 '''
+from dash import Dash, html, dcc, Input, Output
+import dash_bootstrap_components as dbc
 import json
-import dash
-from dash.dependencies import Input, Output
-from dash import html
-from dash import dcc
 from frequent_keywords import frequent_keywords_hist 
 from mentioned_countries import mentionned_countries_map
-from plotly.subplots import make_subplots
+from articles_per_month import articles_per_month
 
-file_list = ["data/topaz-data732--france--www.fdesouche.com--20190101--20211231.json"]
 
 def generate_dashboard(file_list):
+
     #Create the dash app
-    app = dash.Dash()
+    app = Dash(__name__, external_stylesheets=[dbc.themes.SOLAR], title='Corpus Data Analysis Dashboard')
 
     #Layout setup
-    app.layout = html.Div(children=[
-        html.H1(children = "Dashboard test"),
-        dcc.Dropdown(id="dataset",
-                    options = [{'label': file[:-5], 'value' : file}
-                                for file in file_list],
-                    value = file_list[0]),
-        dcc.Graph(id = "graphs")
-    ])
+    app.layout = dbc.Container([
+        html.Div([
+            html.Div([
+                html.H1("Corpus Dashboard"),
+                html.P("This dashboard allows to view data extracted from different articles coming from site of extreme right ")
+                ]), 
+            html.Div([
+                html.H2("Choose a soucre of data"),
+                dcc.Dropdown(id="dataset",
+                        options = [{'label': file[20:-5], 'value' : file}
+                                    for file in file_list],
+                        value = file_list[0],
+                        optionHeight=80,
+                        className='customDropdown')
+                        ],
+                style={
+                    'margin-top': 100,
+                    'margin-left': 15,
+                    'margin-right': 15
+                    }
+            ),
+            html.Div(
+                html.P("@ Louna Camas & Mathieu Docher, All rights reserved"),
+                style ={
+                    'color' : '#cccccc',
+                    'font-size' : '5px',
+                    'margin-top' : '33vh'}), 
+            ],
+            style={
+                'width': '15%',
+                'margin-left': 15,
+                'margin-top': 35,
+                'margin-bottom': 35
+                }),
+        html.Div(
+            id="graphs-container", 
+            className="graphs-container",
+            style={
+                'width': '100%',
+                'margin-top': 35,
+                'margin-right': 35,
+                'margin-bottom': 35,
+                'display': 'flex'
+            })
+    ],
+        fluid=True,
+        style={'display': 'flex'},
+        className='dashboard-container')
 
-    #Callback function
+
+    # Callback function
     @app.callback(
-        Output(component_id = "graphs", component_property="figure"),
-        Input(component_id = "dataset", component_property = "value")
+        Output(component_id="graphs-container", component_property="children"),
+        Input(component_id="dataset", component_property="value")
     )
-
     def update_graphs(selected_dataset):
-        #Load dataset
-        f = open(selected_dataset, "r", encoding="utf-8")
-        data = json.loads(f.read())
-        f.close()
-        
-        #Generate graphs
+        # Load dataset
+        with open(selected_dataset, "r", encoding="utf-8") as f:
+            data = json.loads(f.read())
+
+        # Generate individual figures
         fig_frequent_keywords = frequent_keywords_hist(data)
         fig_country_hist, fig_country_map = mentionned_countries_map(data)
+        fig_articles_per_month = articles_per_month(data)
         
-        # Create a subplot
-        
-        fig = make_subplots(
-            rows=2, cols=2,
-            #subplot_titles=("Frequent Keywords", "Country Histogram", "Country Map"),
-            specs=[
-                [{"type": "xy"}, {"type": "xy"}],  # Row 1: cartesian plots
-                [{"type": "geo"}, None]           # Row 2: map (geo) and empty cell
-            ]
+        # Create separate divs for each figure
+        return html.Div(
+            children=[
+                html.Div(dcc.Graph(figure=fig_frequent_keywords), className="graph-div graph-1"),
+                html.Div(dcc.Graph(figure=fig_articles_per_month), className="graph-div graph-3"),
+                html.Div(dcc.Graph(figure=fig_country_map), className="graph-div graph-4"),
+                html.Div(dcc.Graph(figure=fig_country_hist), className="graph-div graph-2"),
+            ],
+            className="grid-container"
         )
-        
-        # Add traces from fig_frequent_keywords
-        for trace in fig_frequent_keywords.data:
-            fig.add_trace(trace, row=1, col=1)
-        
-        # Add traces from fig_country_hist
-        for trace in fig_country_hist.data:
-            fig.add_trace(trace, row=1, col=2)
-        
-        # Add traces from fig_country_map
-        for trace in fig_country_map.data:
-            fig.add_trace(trace, row=2, col=1)
-        
-        # Update layout for the subplot
-        fig.update_layout(
-            height=800,  # Adjust height to fit the content
-            showlegend=False
-        )
-        
-        return fig
+
     return app
+    
+
+
+
+
+    

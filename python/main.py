@@ -1,8 +1,6 @@
-from frequent_keywords import frequent_keywords_hist
-from mentioned_countries import mentionned_countries_map
 from dashboard import generate_dashboard
 import glob
-import json
+
 
 # f = open("data/topaz-data732--france--www.fdesouche.com--20190101--20211231.json", "r", encoding="utf-8")
 # data = json.loads(f.read())

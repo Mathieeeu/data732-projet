@@ -27,8 +27,8 @@ def articles_per_month(data):
             y=counts,
             marker=dict(
                     color=counts, 
-                    colorscale="Greens",
-                    colorbar=dict(title="Number of Articles")  # Afficher une barre de couleur à droite
+                    colorscale="Greens"
+                    #colorbar=dict(title="Number of Articles")  # Afficher une barre de couleur à droite
                 ),
                 hovertemplate="<b>Date:</b> %{x}<br>" + "<b>Number of articles:</b> %{y}<extra></extra>"
         )
@@ -39,7 +39,10 @@ def articles_per_month(data):
         xaxis_title="Month",
         yaxis_title="Number of articles",
         xaxis_tickangle=-45,
-        template="plotly_white"
+        plot_bgcolor= 'rgba(0,0,0,0)',
+        paper_bgcolor = 'rgba(0,0,0,0)',
+        font=dict(color='white'),
+        margin=dict(l=10, r=20, t=40, b=10)
     )
 
-    fig.show()
+    return fig

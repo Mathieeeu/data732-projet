@@ -46,9 +46,13 @@ def mentionned_countries_map(data, excluded_countries = ["France"]):
             hovertemplate="'<b>%{x}</b>' is mentioned %{y} times<extra></extra>"
     )])
 
-    fig1.update_layout(title_text="Most mentioned countries in the dataset (excluding " + ", ".join(excluded_countries) + ")",
-                    xaxis_title="Countries",
-                    yaxis_title="Frequency",
+    fig1.update_layout(
+        title_text="Most mentioned countries in the dataset (excluding " + ", ".join(excluded_countries) + ")",
+        xaxis_title="Countries",
+        yaxis_title="Frequency",
+        plot_bgcolor= 'rgba(0,0,0,0)',
+        paper_bgcolor = 'rgba(0,0,0,0)',
+        font=dict(color='white')
     )
 
     # World map
@@ -79,8 +83,24 @@ def mentionned_countries_map(data, excluded_countries = ["France"]):
         locations=list(mentioned_countries.keys()), 
         locationmode="country names", 
         color=list(mentioned_countries.values()), 
-        #color_continuous_scale=colors,
-        title="Countries mentioned in the dataset (excluding " + ", ".join(excluded_countries) + ")"
+        color_continuous_scale=colors,
+        title="Countries mentioned in the dataset (excluding " + ", ".join(excluded_countries) + ")",
+    )
+    
+    fig2.update_layout(
+    plot_bgcolor='rgba(0, 0, 0, 0)', 
+    paper_bgcolor='rgba(0, 0, 0, 0)', 
+    font=dict(color='white'),  
+    title=dict(font=dict(color='white')),
+    margin=dict(l=0, r=0, t=40, b=0),
+        geo=dict(
+        showland=True,
+        landcolor='rgba(0, 0, 0, 0)',  
+        lakecolor='rgba(0, 0, 0, 0)',  
+        projection_type='natural earth',  # Type de projection de la carte
+        countrycolor='rgba(255, 255, 255, 0.5)',  # Couleur des frontières des pays transparente ou légèrement visible
+        bgcolor='rgba(0, 0, 0, 0)'  # Fond de la carte géographique transparent
+    ),
     )
 
     return fig1, fig2
