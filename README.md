@@ -69,7 +69,7 @@ Dans un second temps, nous avons essayé d'améliorer la visibilité des graphes
 
 - En utilisant les bibliothèques `fa2` (ForceAtlas2) et `community` pour améliorer la disposition des noeuds et les regrouper en communautés. Le graphe est ensuite mis en forme et affiché par la bibliothèque `plotly`. Cependant, nous ne sommes pas parvenu à des graphes très satisfaisants, les noeuds sont souvent trop proches les uns des autres, les communautés ne sont pas très claires et le tout est difficilement lisible. Le point positif de cette méthode est qu'elle permet d'avoir un graphe interactif au format html, sur lequel on peut zoomer par exemple. Voici un exemple de graphe obtenu avec cette méthode :
 
-![Graphe généré par python, pas très clair](pictures/graph_python.png)
+![Graphe généré par python, pas très clair](pictures/graph_python_mali.png)
 
 - En éditant le graphe manuellement sur Gephi, un logiciel de visualisation de graphes. Gephi permet de manipuler les noeuds et les liens du graphe de manière plus précise, en les déplaçant, en les regroupant, en changeant leur taille, leur couleur, etc. On peut également calculer des mesures de centralité, de modularité, etc. pour mieux comprendre la structure du graphe. Cependant, Gephi ne permet pas de créer des graphes interactifs, il faut donc exporter le graphe en image ou en pdf pour le visualiser. Voici un exemple de graphe obtenu avec Gephi :
 
