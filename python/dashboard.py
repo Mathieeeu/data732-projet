@@ -44,7 +44,7 @@ def generate_dashboard(html_files):
                     }
             ),
             html.Div([
-                html.H2("View the graphs"),
+                html.H2("View the graph"),
                 dbc.Button("Open it", 
                     id='open-button',
                     href=f'/graphes/{html_files[0]["value"]}',

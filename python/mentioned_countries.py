@@ -103,5 +103,4 @@ def mentionned_countries_map(data, excluded_countries = ["France"]):
         bgcolor='rgba(0, 0, 0, 0)'  # Fond de la carte géographique transparent
     ),
     )
-
     return fig1, fig2

@@ -3,7 +3,6 @@ Barchart of number of articles per month
 '''
 
 import plotly.graph_objects as go
-import json
 import calendar
 from datetime import datetime
 
@@ -44,5 +43,5 @@ def articles_per_month(data):
         font=dict(color='white'),
         margin=dict(l=10, r=20, t=40, b=10)
     )
-
+    
     return fig
