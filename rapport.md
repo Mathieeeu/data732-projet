@@ -12,17 +12,17 @@ Au cours de ce projet, nous avons créer des visualisations afin d'analyser des 
 ### Technologies utilisées
 
 Ce projet a été entièrement codé en python à l'aide des librairies suivantes :
+
 - `Json` : lecture et récupération des données
 - `Plotly.graph_objects` & `Plotly.express` : réalisation des différents graphiques
 - `Dash` : réalisation du dashboard
-- `Flask` : utilisation de fichiers html des graphes de manière dynamique
+- `Flask` : serveur web pour le dashboard
 - `Calendar` & `Datetime` : gestion des dates de publication
-- `Networkx` : création de graphe
-- `ForceAtlas2` : amélioration la disposition des noeuds
-- `Community` : créer des communautés/ de la modularité
+- `Networkx` : création de graphes
+- `ForceAtlas2` : amélioration de la disposition des noeuds
+- `Community` : créer des communautés/de la modularité dans les graphes
 
-
-Les graphes ont été visualisés à l'aide du logiciel `Gephy`.
+Certains graphes ont été visualisés à l'aide du logiciel `Gephy`.
 
 ---
 
@@ -83,6 +83,7 @@ Sur ce graphe, on peut distinguer des communautés de mots-clés, qui sont regro
 Voici les liens pour visualiser les graphes obtenus avec Gephi en plus haute résolution :
 
 _([Graphe n°1 : "françaisdesouche"](https://mathieeeu.github.io/cours/data732/graphes/graph_gephi_fdesouche.png))_
+
 _([Graphe n°2 : "égalité et reconciliation"](https://mathieeeu.github.io/cours/data732/graphes/graph_gephi_egalitereconcil.png))_ _(la taille des points semble incorrecte sur ce graphe là...)_
 
 ---
