@@ -80,6 +80,7 @@ Sur ce graphe, on peut distinguer des communautés de mots-clés, qui sont regro
 Voici les liens pour visualiser les graphes obtenus avec Gephi en plus haute résolution :
 
 _([Graphe n°1 : "françaisdesouche"](https://mathieeeu.github.io/cours/data732/graph_gephi_fdesouche.png))_
+
 _([Graphe n°2 : "égalité et reconciliation"](https://mathieeeu.github.io/cours/data732/graph_gephi_egalitereconcil.png))_ _(la taille des points semble incorrecte sur ce graphe là...)_
 
 ---
