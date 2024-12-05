@@ -1,7 +1,6 @@
 # **Projet DATA732 - Analyse d'articles**
 
 *Par : Louna Camas et Mathieu Docher*
-
 *Données utilisées : Corpus d'articles d'extrême droite* 
 
 ---
@@ -11,6 +10,7 @@
 Au cours de ce projet, nous avons créer des visualisations afin d'analyser des données extraites d'articles de journaux d'extrème droite. L'objectif étant de produire un dashboard clair et cohérent permettant l'analyse des données.
 
 ### Technologies utilisées
+
 Ce projet a été entièrement codé en python à l'aide des librairies suivantes :
 - `Json` : lecture et récupération des données
 - `Plotly.graph_objects` & `Plotly.express` : réalisation des différents graphiques
@@ -24,6 +24,7 @@ Ce projet a été entièrement codé en python à l'aide des librairies suivante
 
 Les graphes ont été visualisés à l'aide du logiciel `Gephy`.
 
+---
 
 ## Réalisations
 
@@ -53,7 +54,6 @@ Ensuite, nous avons utilisé la librairie `plotly` pour créer une carte du mond
 
 On remarque très facilement les pays les plus cités, mais on peut voir plus facilement certaines tendances géographiques, notamment envers les pays du Moyen-Orient et d'Afrique du Nord, qui sont assez souvent cités dans les articles de Sputniknews. La carte ajoute donc une dimension visuelle et géographique que l'histogramme ne permet pas.
 
-
 ### Fréquence des mots clés
 
 Le choix d'un graphique en barres s'explique ici par sa représentation claire de la fréquence des mots-clés dans le corpus d'articles. Il permet de comparer facilement les occurrences des termes les plus utilisés, en mettant en évidence les différences et les tendances dans les données en fonction des années. En effet, pour créer ce graphique, nous parcourons toutes les données en sauvegardant dans un dictionnaire le nombre d'apparition des mots par année et au total. Ensuite, nous sélectionnons uniquement les 20 termes apparaissant le plus (par soucis de lisibilité). Nous pouvons choisir l'année à l'aide du menu déroulant sur la droite du graphique.
@@ -69,14 +69,23 @@ Dans un second temps, nous avons essayé d'améliorer la visibilité des graphes
 
 - En utilisant les bibliothèques `fa2` (ForceAtlas2) et `community` pour améliorer la disposition des noeuds et les regrouper en communautés. Le graphe est ensuite mis en forme et affiché par la bibliothèque `plotly`. Cependant, nous ne sommes pas parvenu à des graphes très satisfaisants, les noeuds sont souvent trop proches les uns des autres, les communautés ne sont pas très claires et le tout est difficilement lisible. Le point positif de cette méthode est qu'elle permet d'avoir un graphe interactif au format html, sur lequel on peut zoomer par exemple. Voici un exemple de graphe obtenu avec cette méthode :
 
-![Graphe généré par python, pas très clair](pictures/graph_python.png)
+    ![Graphe généré par python, pas très clair](pictures/graph_python_mali.png)
 
-- En éditant le graphe manuellement sur Gephi, un logiciel de visualisation de graphes. Gephi permet de manipuler les noeuds et les liens du graphe de manière plus précise, en les déplaçant, en les regroupant, en changeant leur taille, leur couleur, etc. On peut également calculer des mesures de centralité, de modularité, etc. pour mieux comprendre la structure du graphe. Cependant, Gephi ne permet pas de créer des graphes interactifs, il faut donc exporter le graphe en image ou en pdf pour le visualiser. Voici un exemple de graphe obtenu avec Gephi et les URL pour télécharger les images en haute résolution :
+    Ici, nous avons mis le graphe des mots clés les plus fréquents des articles concernant le Mali sur le site "égalité et reconciliation" car c'est le seul qui est réellement lisible sans avoir besoin de zoomer. Les autres sont accessibles depuis le dashboard (ou à [cette URL](https://mathieeeu.github.io/cours/data732/graphes/index.html)).
+    <br> 
+
+- En éditant le graphe manuellement sur Gephi, un logiciel de visualisation de graphes. Gephi permet de manipuler les noeuds et les liens du graphe de manière plus précise, en les déplaçant, en les regroupant, en changeant leur taille, leur couleur, etc. On peut également calculer des mesures de centralité, de modularité, etc. pour mieux comprendre la structure du graphe. Cependant, Gephi ne permet pas de créer des graphes interactifs, il faut donc exporter le graphe en image ou en pdf pour le visualiser. Voici un exemple de graphe obtenu avec Gephi :
 
 ![Graphe généré par Gephi, plus clair](pictures/graph_gephi_fdesouche.png)
 
-_([Graphe n°1 : "françaisdesouche"](pictures/graph_gephi_fdesouche.png))_
-_([Graphe n°2 : "égalité et reconciliation"](pictures/graph_gephi_egalitereconcil.png))_
+Sur ce graphe, on peut distinguer des communautés de mots-clés, qui sont regroupés en fonction de leur proximité dans les articles. On peut donc appercevoir certaines _tendances_ politiques ou thématiques : par exemple, les mots `france` et `français`sont plus gros et très proches, ce qui signifie qu'ils sont souvent cités dans les articles, mais on peut remarquer un très grand nombre de "proximités" entre certains mots, comme `gillets` et `jaunes`, `macron` et `président`, `gauche` et `mosquée`, ce qui peut témoigner d'une certaine tendance politique dans les articles.
+
+Voici les liens pour visualiser les graphes obtenus avec Gephi en plus haute résolution :
+
+_([Graphe n°1 : "françaisdesouche"](https://mathieeeu.github.io/cours/data732/graphes/graph_gephi_fdesouche.png))_
+_([Graphe n°2 : "égalité et reconciliation"](https://mathieeeu.github.io/cours/data732/graphes/graph_gephi_egalitereconcil.png))_ _(la taille des points semble incorrecte sur ce graphe là...)_
+
+---
 
 ## Dashboard
 Pour construire le dashboard, nous avons utlisé *dash*. Ce dernier a connu deux versions distinctes. Une première version "simple" contenant une div comportant un titre et un unqiue espace pour un graphique. Les différents graphiques étaient organisés à l'aide de *subplot*. Cependant, cettte réalisation comporte de nombreuses limites telles que les titres et les légendes (colorscale) n'apparaissaient pas enlevant la possibilité qu'ils se mettent à jour avec le graphique, et également l'esthétisme. Il est assez dur de modeler *subplot* selon le résultat que nous voulions.
@@ -90,3 +99,5 @@ Nous n'avons pas voulu incorporer directment le graphe dans la première page du
 - d'une **zone contenant les graphiques**. Nous avons essayé d'adapter les tailles des graphiques afin d'optimiser la lisibilité des plus compliqués. La fréquence des mots clés aurait peut-être mérité une plus grande place mais nous ne voulions pas séparer les deux graphiques relatifs aux pays.
 
 ![Dashboard](pictures/dashboard.png) 
+
+---
