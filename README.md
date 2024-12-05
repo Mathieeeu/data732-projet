@@ -12,17 +12,17 @@ Au cours de ce projet, nous avons créer des visualisations afin d'analyser des 
 ### Technologies utilisées
 
 Ce projet a été entièrement codé en python à l'aide des librairies suivantes :
-
 - `Json` : lecture et récupération des données
 - `Plotly.graph_objects` & `Plotly.express` : réalisation des différents graphiques
 - `Dash` : réalisation du dashboard
-- `Flask` : serveur web pour le dashboard
+- `Flask` : utilisation de fichiers html des graphes de manière dynamique
 - `Calendar` & `Datetime` : gestion des dates de publication
-- `Networkx` : création de graphes
-- `ForceAtlas2` : amélioration de la disposition des noeuds
-- `Community` : créer des communautés/de la modularité dans les graphes
+- `Networkx` : création de graphe
+- `ForceAtlas2` : amélioration la disposition des noeuds
+- `Community` : créer des communautés/ de la modularité
 
-Certains graphes ont été visualisés à l'aide du logiciel `Gephy`.
+
+Les graphes ont été visualisés à l'aide du logiciel `Gephy`.
 
 ---
 
@@ -69,10 +69,7 @@ Dans un second temps, nous avons essayé d'améliorer la visibilité des graphes
 
 - En utilisant les bibliothèques `fa2` (ForceAtlas2) et `community` pour améliorer la disposition des noeuds et les regrouper en communautés. Le graphe est ensuite mis en forme et affiché par la bibliothèque `plotly`. Cependant, nous ne sommes pas parvenu à des graphes très satisfaisants, les noeuds sont souvent trop proches les uns des autres, les communautés ne sont pas très claires et le tout est difficilement lisible. Le point positif de cette méthode est qu'elle permet d'avoir un graphe interactif au format html, sur lequel on peut zoomer par exemple. Voici un exemple de graphe obtenu avec cette méthode :
 
-    ![Graphe généré par python, pas très clair](pictures/graph_python_mali.png)
-
-    Ici, nous avons mis le graphe des mots clés les plus fréquents des articles concernant le Mali sur le site "égalité et reconciliation" car c'est le seul qui est réellement lisible sans avoir besoin de zoomer. Les autres sont accessibles depuis le dashboard (ou à [cette URL](https://mathieeeu.github.io/cours/data732/graphes/index.html)).
-    <br> 
+![Graphe généré par python, pas très clair](pictures/graph_python_mali.png)
 
 - En éditant le graphe manuellement sur Gephi, un logiciel de visualisation de graphes. Gephi permet de manipuler les noeuds et les liens du graphe de manière plus précise, en les déplaçant, en les regroupant, en changeant leur taille, leur couleur, etc. On peut également calculer des mesures de centralité, de modularité, etc. pour mieux comprendre la structure du graphe. Cependant, Gephi ne permet pas de créer des graphes interactifs, il faut donc exporter le graphe en image ou en pdf pour le visualiser. Voici un exemple de graphe obtenu avec Gephi :
 
@@ -82,9 +79,9 @@ Sur ce graphe, on peut distinguer des communautés de mots-clés, qui sont regro
 
 Voici les liens pour visualiser les graphes obtenus avec Gephi en plus haute résolution :
 
-_([Graphe n°1 : "françaisdesouche"](https://mathieeeu.github.io/cours/data732/graphes/graph_gephi_fdesouche.png))_
+_([Graphe n°1 : "françaisdesouche"](https://mathieeeu.github.io/cours/data732/graph_gephi_fdesouche.png))_
 
-_([Graphe n°2 : "égalité et reconciliation"](https://mathieeeu.github.io/cours/data732/graphes/graph_gephi_egalitereconcil.png))_ _(la taille des points semble incorrecte sur ce graphe là...)_
+_([Graphe n°2 : "égalité et reconciliation"](https://mathieeeu.github.io/cours/data732/graph_gephi_egalitereconcil.png))_ _(la taille des points semble incorrecte sur ce graphe là...)_
 
 ---
 
