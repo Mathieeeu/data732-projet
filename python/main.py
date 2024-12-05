@@ -13,11 +13,18 @@ import glob
 # Load data from all json files in the data folder
 file_list = glob.glob("data/*.json")
 
-# Generate dashboard for each file
-for file in file_list:
-    excluded_countries = ["France", "Mali"] if "mali" in file else ["France"]
-    #generate_dashboard(file, excluded_countries)
+    
+html_files = [
+    {'label': 'data/topaz-data732--france--fr.sputniknews.africa--20190101--20211231.json', 'value': 'graph_france_sputnik.html'},
+    {'label': 'data/topaz-data732--france--french.presstv.ir--20190101--20211231.json', 'value': 'graph_france_presstv.html'},
+    {'label': 'data/topaz-data732--france--www.egaliteetreconciliation.fr--20190101--20211231.json', 'value': 'graph_france_egalite.html'},
+    {'label': 'data/topaz-data732--france--www.fdesouche.com--20190101--20211231.json', 'value': 'graph_france_fdesouche.html'},
+    {'label': 'data/topaz-data732--mali--fr.sputniknews.africa--20190101--20211231.json', 'value': 'graph_mali_sputnik.html'},
+    {'label': 'data/topaz-data732--mali--fr.sputniknews.africa--20190101--20211231.json', 'value': 'graph_mali_presstv.html'},
+    {'label': 'data/topaz-data732--mali--www.egaliteetreconciliation.fr--20190101--20211231.json', 'value': 'graph_mali_egalite.html'},
+]
+
     
 if __name__ == "__main__":
-    app = generate_dashboard(file_list)
+    app = generate_dashboard(html_files)
     app.run_server(debug = True)

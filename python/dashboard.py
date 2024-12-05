@@ -7,12 +7,19 @@ import json
 from frequent_keywords import frequent_keywords_hist 
 from mentioned_countries import mentionned_countries_map
 from articles_per_month import articles_per_month
+from flask import Flask, send_from_directory
 
 
-def generate_dashboard(file_list):
+def generate_dashboard(html_files):
 
     #Create the dash app
     app = Dash(__name__, external_stylesheets=[dbc.themes.SOLAR], title='Corpus Data Analysis Dashboard')
+    
+    server = app.server
+    #Configure path
+    @server.route('/graphes/<path:filename>')
+    def serve_html(filename):
+        return send_from_directory('graphes', filename)
 
     #Layout setup
     app.layout = dbc.Container([
@@ -24,18 +31,36 @@ def generate_dashboard(file_list):
             html.Div([
                 html.H2("Choose a soucre of data"),
                 dcc.Dropdown(id="dataset",
-                        options = [{'label': file[20:-5], 'value' : file}
-                                    for file in file_list],
-                        value = file_list[0],
+                        options = [{'label': file['label'][20:-5], 'value' : file['label']}
+                                    for file in html_files],
+                        value = html_files[0]['label'],
                         optionHeight=60,
                         className='customDropdown')
                         ],
                 style={
-                    'margin-top': '5vh',
+                    'margin-top': '7vh',
                     'margin-left': '0.4vw',
                     'margin-right': '0.4vw'
                     }
             ),
+            html.Div([
+                html.H2("View the graphs"),
+                dbc.Button("Open it", 
+                    id='open-button',
+                    href=f'/graphes/{html_files[0]["value"]}',
+                    className="custom-button", 
+                    target="_blank",
+                    style ={
+                    'width': '90%',
+                    'align-items' : 'center'
+                    }
+                )],
+                style={
+                    'width': '100%',
+                    'margin-top': '7vh',
+                    'margin-left': '0.4vw',
+                    'margin-right': '0.4vw'
+                }),
             html.Div(
                 html.P("@ Louna Camas & Mathieu Docher, All rights reserved",
                 style ={
@@ -66,10 +91,10 @@ def generate_dashboard(file_list):
         className='dashboard-container')
 
 
-    # Callback function
+    # Callback for update graphics
     @app.callback(
         Output(component_id="graphs-container", component_property="children"),
-        Input(component_id="dataset", component_property="value")
+        Input(component_id="dataset", component_property="value"),
     )
     def update_graphs(selected_dataset):
         # Load dataset
@@ -91,6 +116,15 @@ def generate_dashboard(file_list):
             ],
             className="grid-container"
         )
+        
+    # Callback 2: Update link on the button
+    @app.callback(
+        Output('open-button', 'href'),
+        Input('dataset', 'value')
+    )
+    def update_button_url(selected_file):
+        value = [item['value'] for item in html_files if item['label'] == selected_file]
+        return f"/graphes/{value[0]}"
 
     return app
     

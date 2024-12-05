@@ -45,7 +45,7 @@ p {
     width: 100%;
     height: 38px;
     background-color: transparent;
-    border: 1px solid #676768;
+    border: 1px solid #cccccc; 
     border-radius: 3px;
     color : #eefbfd 
 }
@@ -103,4 +103,32 @@ p {
 .graph-4 {
     grid-column: 2; 
     grid-row: 2;  
+}
+
+/*bouton*/
+.custom-button {
+    font-family: "Poppins", sans-serif; 
+    font-size: 15px;
+    color: #ffffff; 
+    background-color: #010103; 
+    border: 1px solid #cccccc; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    cursor: pointer; /
+    text-align : center;
+    transition: all 0.3s ease-in-out; 
+}
+
+.custom-button:hover {
+    background-color: #ffffff; 
+    color: #010103; 
+    border-color: #ffffff; 
+    font-weight: bold;
+}
+
+/* Effet lorsqu'on clique */
+.custom-button:active {
+    background-color: #cccccc !important;
+    color: #010103 !important;
+    border-color: #cccccc !important;
 }
