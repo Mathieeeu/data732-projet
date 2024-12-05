@@ -16,7 +16,12 @@ file_list = glob.glob("data/*.json")
     
 html_files = [
     {'label': 'data/topaz-data732--france--fr.sputniknews.africa--20190101--20211231.json', 'value': 'graph_france_sputnik.html'},
-    {'label': 'data/topaz-data732--france--french.presstv.ir--20190101--20211231.json', 'value': 'graph_france_presstv.html'}
+    {'label': 'data/topaz-data732--france--french.presstv.ir--20190101--20211231.json', 'value': 'graph_france_presstv.html'},
+    {'label': 'data/topaz-data732--france--www.egaliteetreconciliation.fr--20190101--20211231.json', 'value': 'graph_france_egalite.html'},
+    {'label': 'data/topaz-data732--france--www.fdesouche.com--20190101--20211231.json', 'value': 'graph_france_fdesouche.html'},
+    {'label': 'data/topaz-data732--mali--fr.sputniknews.africa--20190101--20211231.json', 'value': 'graph_mali_sputnik.html'},
+    {'label': 'data/topaz-data732--mali--fr.sputniknews.africa--20190101--20211231.json', 'value': 'graph_mali_presstv.html'},
+    {'label': 'data/topaz-data732--mali--www.egaliteetreconciliation.fr--20190101--20211231.json', 'value': 'graph_mali_egalite.html'},
 ]
 
     
