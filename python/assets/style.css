@@ -106,29 +106,23 @@ p {
 }
 
 /*bouton*/
-.custom-button {
+button{
     font-family: "Poppins", sans-serif; 
-    font-size: 15px;
-    color: #ffffff; 
-    background-color: #010103; 
+    background: #010103;
     border: 1px solid #cccccc; 
+    color : #ffffff;
     border-radius: 5px; 
     padding: 10px 20px; 
-    cursor: pointer; /
-    text-align : center;
+    cursor: pointer; 
+    align-items : center;
     transition: all 0.3s ease-in-out; 
+    text-decoration: none;
+    width : 80%;
 }
 
-.custom-button:hover {
+button:hover{
     background-color: #ffffff; 
     color: #010103; 
     border-color: #ffffff; 
     font-weight: bold;
-}
-
-/* Effet lorsqu'on clique */
-.custom-button:active {
-    background-color: #cccccc !important;
-    color: #010103 !important;
-    border-color: #cccccc !important;
 }

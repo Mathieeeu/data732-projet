@@ -45,14 +45,15 @@ def generate_dashboard(html_files):
             ),
             html.Div([
                 html.H2("View the graph"),
-                dbc.Button("Open it", 
+                dcc.Link(html.Button("Open it"), 
                     id='open-button',
                     href=f'/graphes/{html_files[0]["value"]}',
                     className="custom-button", 
-                    target="_blank",
+                    target = "_blank",
+                    refresh =True,
                     style ={
-                    'width': '90%',
-                    'align-items' : 'center'
+                    'width': '100%',
+                    'margin-left': '1vw'
                     }
                 )],
                 style={
