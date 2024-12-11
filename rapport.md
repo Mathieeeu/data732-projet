@@ -2,12 +2,13 @@
 
 *Par : Louna Camas et Mathieu Docher*
 *Données utilisées : Corpus d'articles d'extrême droite* 
+*[GitHub](https://github.com/Mathieeeu/data732-projet)*
 
 ---
 
 ## Introduction 
 
-Au cours de ce projet, nous avons créer des visualisations afin d'analyser des données extraites d'articles de journaux d'extrème droite. L'objectif étant de produire un dashboard clair et cohérent permettant l'analyse des données.
+Au cours de ce projet, nous avons créé des visualisations afin d'analyser des données extraites d'articles de journaux d'extrème droite. L'objectif étant de produire un dashboard clair et cohérent permettant l'analyse des données.
 
 ### Technologies utilisées
 
